@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>ng-routing</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-app="routing" ng-controller="indexController">
+    <nav class="navbar navbar-default navbar-fixed-top color">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" id="ulcolor">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myLinks" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Olympics</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse " id="myLinks">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/ ">Home</a></li>
+                    <li><a href="#/newPlayer" role="button ">newPlayer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="carousel slide">
+        <div class="carousel-inner" class="img-responsive">
+            <img src="images/rio_l.jpg">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 random-margin">
+                <div class="input-group ">
+                    <input type="text " class="form-control" placeholder="Search player by id" ng-model="txtSearch">
+                    <span class="input-group-btn">
+                    <a href="#/Search/{{txtSearch}}" role="button" class="btn btn-primary">Search</a>
+                    <a href="#/loadAll" role="button" class="btn btn-primary">LoadAll</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary random-margin">
+            <div class="panel-heading">Medal Tally
+            </div>
+        </div>
+        <div ng-view></div>
+    </div>
+    <footer>
+    </footer>
+    <script type="text/javascript " src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript " src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript " src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript " src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript " src="js/main.js"></script>
+    <script type="text/javascript " src="js/service.js"></script>
+</body>
+
+</html>

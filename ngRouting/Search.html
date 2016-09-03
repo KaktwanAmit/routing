@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr ng-repeat="player in players" ng-if="$first">
+                <!-- amit -->
+                <th ng-repeat="(k, v) in player">{{k}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="player in players">
+                <td ng-repeat="(k, v) in player">{{v}}
+                </td>
+                <td>
+                    <a href="#edit" class="btn btn-primary" ng-click="editt(player.id)"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <button class="btn btn-primary"><span class="glyphicon glyphicon-trash" ng-click="Delete(player.id)"></span></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary pull-left" ng-click="prevVal()" ng-show="prev">prev</button>
+    <button type="button" class="btn btn-primary pull-right" ng-click="nextVal()" ng-show="next">next</button>
+</div>
